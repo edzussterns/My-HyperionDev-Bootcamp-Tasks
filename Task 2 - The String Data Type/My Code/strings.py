@@ -1,2 +1,4 @@
 hero = "$$$Superman$$$"
-print(hero.strip("$"))	# Output: "Superman"
+
+# Print: "Superman"
+print(hero.strip("$"))
