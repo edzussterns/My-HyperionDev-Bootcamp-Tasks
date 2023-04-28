@@ -1,6 +1,6 @@
-# My-HyperionDev-Bootcamp-Tasks
+# About My-HyperionDev-Bootcamp-Tasks repository
 
-This repository contains all my tasks (that involves writing or working with code) I have worked on within my 16 week intense Software Engineering skills bootcamp provided by HyperionDev.
+This repository contains all the code that I wrote or was working on within my 16 week intense Software Engineering skills bootcamp provided by HyperionDev.
 
 Each Task is in a seperate folder and contains codes I worked on and a subfolder.
 # Subfolder contains:
