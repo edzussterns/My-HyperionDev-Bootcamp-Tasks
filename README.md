@@ -6,7 +6,7 @@ This repository contains all the code that I wrote or was working on within my 1
 Some of the tasks are very simple and basic but I still have them all here as this is the start of my journey into programming.
 
 Each **Task** folder contains:
-  - subfolder **My Code** that contains the code files I worked on,
+  - subfolder **My Code** that contains the *code files* I worked on,
   - pdf file that includes material about topic and task instructions at last pages,
   - may also have additional material that supports the tasks or topic covered,
   - example codes.
