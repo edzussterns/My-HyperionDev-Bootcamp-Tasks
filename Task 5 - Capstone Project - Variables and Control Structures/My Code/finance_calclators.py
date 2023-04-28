@@ -1,6 +1,9 @@
 '''
-I have been struggling to find the right way to fit in while loop in function I had for calculating bond as it icluded all inputs related to function.
-I asked for help with loops in 'The Coding Den' discord server: https://discord.gg/code. User Kenny pointed out that my functions has very low cohesion and they are responsible for way too much. Suggested to try to split things up more. In terms of good code, the calculate_bond function should do just what it says - calculate the bond, not take any inputs. It would be better to make the calculate_bond take the inputs as parameters.
+I had help with loops from user Kenny on 'The Coding Den' discord server: https://discord.gg/code.
+My functions had very low cohesion and they were responsible for way too much.
+Suggested to try to split things up more.
+In terms of good code, the calculate_bond function should do just what it says - calculate the bond, not take any inputs.
+It would be better to make the calculate_bond take the inputs as parameters.
 Kenny also helped to undersand and see where code is dublicating and repeating.
 '''
 import math
@@ -8,18 +11,12 @@ import math
  # Money in outputs is printed with 2 decimal places ('.2f' - this is responsible for this) and large numbers like 100000 are displayed like 100,000 (',' before '.2f' is responsible for this).
 
 # Function to get an input from user.
-# I tweaked this function many times with help of few google searches.
 # Loop to keep asking user for input until it's the right type or, if nothing has been entered or value is 0.
 def get_input(display: str, to_type: type, on_error: str, validate_func=None):
   while True:
     try:
       value = input(display)
-      if value.endswith(('k', 'K')): # Accept 'k' or 'K' to for thousand input and convert
-        value = float(value[:-1]) * 1000
-      elif value.endswith(('m', 'M')):  # Accept 'm' or 'M' for million input and convert
-        value = float(value[:-1]) * 1000000
-      else:
-        value = to_type(value)
+      value = to_type(value)
       if validate_func and not validate_func(value):
         print(on_error)
         continue
@@ -33,7 +30,6 @@ def calculate_investment(deposit, interest_rate, years, interest):
     total_amount = deposit * (1 + interest_rate / 100 * years)
   elif interest.lower() == "compound":
     total_amount = deposit * math.pow(1 + interest_rate / 100, years)
-    
   profit = total_amount - deposit
   # Print results for investment projection including user's inputs for clarification
   print(f"\nIf you invest £ {deposit:,.2f} for {years} years with {interest} interest rate {interest_rate}%, you will get back £ {total_amount:,.2f}. That is £ {profit:,.2f} profit on top of your initial investment!")
@@ -48,12 +44,11 @@ def calculate_bond(interest_rate: float, house_value: float, months: int):
 
 # Print welcome message and menu shown in collumns
 print("* * * Finance Calculator! * * * \n")
-print("\033[4mNote\033[0m: '10k', '10M' for numbers are also are accepted.")
 print(f"\n{'investment': <10} - to calculate the amount of interest you'll earn on your investment")
 print(f"{'bond': <10} - to calculate the amount you'll have to pay on a home loan")
 
 # Error message for output if wrong input
-error_msg = "\n***Invalid input.***"
+error_msg = "\nInvalid input."
 
 # Promt user to choose 'investment' or 'bond', loop while correct input given
 while True:
@@ -71,12 +66,10 @@ while True:
     if interest.lower() not in ["simple", "compound"]:
       interest = get_input("Which type of interest you want to invest with? Enter either 'simple' or 'compound': ", str, error_msg, lambda x: len(x) > 0)
       continue
-
     else:
       calculate_investment(deposit, interest_rate, years, interest)
       # Stop program after results printed
       break
-
   # If 'bond' chosen, promt user for relevant inputs 
   elif user_choice.lower() == "bond":
     house_value = get_input("Enter present value of the house (e.g. 100000): ", float, error_msg, lambda x: x > 0)
