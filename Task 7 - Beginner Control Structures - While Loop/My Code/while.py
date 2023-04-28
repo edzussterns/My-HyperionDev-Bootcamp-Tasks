@@ -14,7 +14,8 @@ while user_input != "-1":
   user_input = input("Enter a number (-1 to exit): ")
 
 # Calculate average and print results
+# Round total, count and average to 2 decimal places
 average = total / count
-print(f"\nTotal: {total}")
-print(f"Count: {count}")
-print(f"Average: {average}")
+print(f"\nTotal: {total:,.2f}")
+print(f"Count: {count:,.2f}")
+print(f"Average: {average:,.2f}")
