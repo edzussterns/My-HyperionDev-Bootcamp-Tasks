@@ -10,6 +10,8 @@ Each **Task** folder contains:
   - may also have additional material that supports the tasks or topic covered,
   - example codes.
 
+If you have anything on your mind regards the tasks that you would like to discuss, head to **Discussions** section and let's connect.
+
 This is link to my **HyperionDev portfolio** that shows the progress of tasks, task grades and reviews of my tasks: https://www.hyperiondev.com/portfolio/148596/
 
 Sadly GitHub in this bootcamp is covered as one of the last tasks so there is no version history to the projects I worked on prior, however I am adding features and updating previous projects as I learn something new.
