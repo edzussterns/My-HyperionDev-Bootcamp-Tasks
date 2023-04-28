@@ -1,4 +1,4 @@
-# About My-HyperionDev-Bootcamp-Tasks repository
+# About this repository
 
 This repository contains all the code that I wrote or was working on within my 16 week intense Software Engineering skills bootcamp provided by **HyperionDev**.
 
