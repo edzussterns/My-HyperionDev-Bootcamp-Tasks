@@ -1,0 +1,25 @@
+           User Overview Report
+=============================================
+Date Report Generated: 2023-06-01 22:41:14
+
+Total Users:   3
+Total Tasks:   2
+
+Username:         admin
+Tasks Assigned:   1 (50.00 % of total)
+% Completed:      0.00 %
+% Incomplete:     100.00 %
+% Overdue:        0.00 %
+---------------------------------------------
+Username:         ed
+Tasks Assigned:   1 (50.00 % of total)
+% Completed:      0.00 %
+% Incomplete:     100.00 %
+% Overdue:        0.00 %
+---------------------------------------------
+Username:         peter_parker
+Tasks Assigned:   0 (0.00 % of total)
+% Completed:      0.00 %
+% Incomplete:     0.00 %
+% Overdue:        0.00 %
+---------------------------------------------
