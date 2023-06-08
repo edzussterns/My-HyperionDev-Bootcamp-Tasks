@@ -35,6 +35,8 @@ current_user = None
 script_directory = os.path.dirname(os.path.abspath(__file__))
 user_file_path = os.path.join(script_directory, "user.txt")
 tasks_file_path = os.path.join(script_directory, "tasks.txt")
+task_overview_file_path = os.path.join(script_directory, "task_overview.txt")
+user_overview_file_path = os.path.join(script_directory, "task_overview.txt")
 
 
 # Displays the current option/screen user currently is in
@@ -776,7 +778,7 @@ def generate_reports():
     total_users = len(users)
 
     # Generate task overview report
-    with open("task_overview.txt", "w") as task_file:
+    with open(task_overview_file_path, "w") as task_file:
         task_file.write("           Task Overview Report\n")
         task_file.write(f"{'=' * line_width}\n")
         task_file.write("Date Report Generated: {}\n\n".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
@@ -790,7 +792,7 @@ def generate_reports():
     print("\nTask Overview report generated successfully!")
 
     # Generate user overview report
-    with open("user_overview.txt", "w") as user_file:
+    with open(user_overview_file_path, "w") as user_file:
         user_file.write("           User Overview Report\n")
         user_file.write(f"{'=' * line_width}\n")
         user_file.write("Date Report Generated: {}\n\n".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
@@ -835,12 +837,12 @@ def display_statistics():
     clear_screen()
 
     # Read and display the task overview report
-    with open("task_overview.txt", "r") as task_file:
+    with open(task_overview_file_path, "r") as task_file:
         task_overview = task_file.read()
         print(task_overview)
 
     # Read and display the user overview report
-    with open("user_overview.txt", "r") as user_file:
+    with open(user_overview_file_path, "r") as user_file:
         user_overview = user_file.read()
         print(user_overview)
 
