@@ -31,6 +31,11 @@ line_width_menu = 32
 press_enter_message = "Press 'Enter' to return to the main menu..."
 current_user = None
 
+#==================== Global File Paths ====================
+script_directory = os.path.dirname(os.path.abspath(__file__))
+user_file_path = os.path.join(script_directory, "user.txt")
+tasks_file_path = os.path.join(script_directory, "tasks.txt")
+
 
 # Displays the current option/screen user currently is in
 def print_screen_name(screen_name):
@@ -134,17 +139,18 @@ def create_user_file():
     
     print_welcome_message()
 
-    if not os.path.isfile("user.txt"):
+    if not os.path.isfile(user_file_path):
         print("\nError: 'user.txt' file was not found.")
         print("\nTo access register with existing users, make sure 'user.txt' file is located in same directory as task_manager.py.")
-
+        
+        # Promt user to continue with creating new file or exit
         user_file_choice = input("\nPress 'Enter' to continue and create new 'user.txt' file with ADMIN as only user or enter 'e' to exit: ")
         
         if user_file_choice.lower() == 'e':
             print("Good Bye!")
             exit()
         else:
-            with open("user.txt", "w") as default_file:
+            with open(user_file_path, "w") as default_file:
                 default_file.write("admin;password")
                 clear_screen()
 
@@ -166,18 +172,18 @@ def create_tasks_file():
 
     print_welcome_message()
 
-    if not os.path.isfile("tasks.txt"):
-        # Print message 
+    if not os.path.isfile(tasks_file_path):
         print("\nError: 'tasks.txt' file was not found.")
         print("\nTo access existing tasks, make sure 'tasks.txt' file is located in same directory as 'task_manager.py'.")
-        # Promt user to 
+        
+        # Promt user to continue with creating new file or exit
         tasks_file_choice = input("\nPress 'Enter' to continue and create new 'tasks.txt' file or enter 'e' to exit: ")
         
         if tasks_file_choice.lower() == 'e':
             print("Good Bye!")
             exit()
         else:
-            with open("tasks.txt", "w") as default_file:
+            with open(tasks_file_path, "w") as default_file:
                 clear_screen()
 
                 print_welcome_message()
@@ -196,7 +202,7 @@ def load_users():
     """
 
     users = {}
-    with open("user.txt", "r") as user_file:
+    with open(user_file_path, "r") as user_file:
         for line in user_file:
             username, password = line.strip().split(";")
             users[username.lower()] = password
@@ -236,7 +242,7 @@ def main_menu():
     print("Main menu:")
 
     for option, description in regular_menu.items():
-            print(f"{option.ljust(2)} - {description}")
+        print(f"{option.ljust(2)} - {description}")
 
     # Display options for the ADMIN user
     if current_user == 'admin':
@@ -1013,7 +1019,7 @@ def update_users(users, current_user, new_password):
     This function takes a dictionary of user information, the current username, and the new password.
     It updates the password for the current user in the dictionary and returns the updated dictionary.
     """
-    
+
     if current_user in users:
         users[current_user] = new_password
     return users
@@ -1030,7 +1036,7 @@ def write_users(users):
     Each user's information is formatted as 'username;password' and written on a new line in the file.
     """
 
-    with open("user.txt", "w") as user_file:
+    with open(user_file_path, "w") as user_file:
         for username, password in users.items():
             user_file.write(f"{username};{password}\n")
 
@@ -1104,7 +1110,7 @@ def load_tasks():
     task_list = []
 
     try:
-        with open("tasks.txt", "r") as tasks_file:
+        with open(tasks_file_path, "r") as tasks_file:
             lines = tasks_file.readlines()
             for line in lines:
                 task_components = line.strip().split(';')
@@ -1134,7 +1140,7 @@ def update_tasks_file(task_list):
         task_list (list): The list of tasks to be written to the file.
     """
     
-    with open("tasks.txt", "w") as tasks_file:
+    with open(tasks_file_path, "w") as tasks_file:
         for task in task_list:
             due_date_str = task['due_date'].strftime(date_format)
             date_assigned_str = task['date_assigned'].strftime(date_format)
