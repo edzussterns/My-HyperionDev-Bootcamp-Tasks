@@ -1,2 +1,22 @@
 ed;admin;paassa;dadadvsfgdrb xf dfgdf;08/08/2023;01/06/2023;No
 admin;ed;TestTEst;Test Task Description;09/09/2023;01/06/2023;No
+admin;ed;Fix Login Bug;Investigate and fix the issue with the login functionality;15/06/2023;01/06/2023;No
+admin;peter_parker;Optimize Database Queries;Analyze and optimize the database queries for faster performance;28/05/2023;20/05/2023;Yes
+admin;ed;Implement User Authentication;Develop the user authentication module for the application;10/06/2023;31/05/2023;No
+ed;admin;Design UI Mockups;Create visually appealing UI mockups for the new project;07/06/2023;29/05/2023;No
+peter_parker;admin;Write API Documentation;Document the APIs and provide usage examples;03/06/2023;25/05/2023;Yes
+ed;admin;Refactor Codebase;Refactor the existing codebase to improve maintainability;20/06/2023;01/06/2023;No
+peter_parker;ed;Perform Load Testing;Conduct load testing on the application to identify performance bottlenecks;15/05/2023;10/05/2023;Yes
+admin;ed;Fix Broken Links;Identify and fix broken links on the website;05/06/2023;28/05/2023;No
+ed;peter_parker;Develop User Registration Flow;Implement the user registration flow with email verification;12/06/2023;03/06/2023;No
+peter_parker;admin;Write Unit Tests;Create comprehensive unit tests for the core modules;08/06/2023;01/06/2023;Yes
+admin;ed;Optimize CSS;Optimize the CSS stylesheets for faster page rendering;18/06/2023;03/06/2023;No
+peter_parker;admin;Implement Payment Gateway;Integrate a payment gateway for processing online transactions;20/05/2023;10/05/2023;Yes
+admin;ed;Update Privacy Policy;Review and update the privacy policy document;02/06/2023;25/05/2023;No
+ed;admin;Design Database Schema;Design the database schema for the new project;25/06/2023;05/06/2023;No
+peter_parker;ed;Perform Security Audit;Conduct a security audit to identify vulnerabilities;30/05/2023;20/05/2023;Yes
+admin;ed;Implement Error Logging;Set up error logging to track and analyze application errors;09/06/2023;01/06/2023;No
+peter_parker;admin;Refactor API Endpoints;Refactor and optimize the API endpoints for better performance;22/06/2023;02/06/2023;No
+admin;peter_parker;Write User Manual;Create a comprehensive user manual for the application;25/05/2023;15/05/2023;Yes
+ed;admin;Perform Code Review;Review and provide feedback on the latest code changes;14/06/2023;04/06/2023;No
+peter_parker;ed;Implement Push Notifications;Integrate push notification functionality for real-time updates;04/06/2023;28/05/2023;Yes
